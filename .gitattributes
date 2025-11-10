@@ -1,2 +1,95 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Python source files
+*.py text eol=lf diff=python
+
+# Python bytecode
+*.pyc binary
+*.pyo binary
+*.pyd binary
+
+# Configuration files
+*.toml text eol=lf
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+.env* text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.rst text eol=lf
+*.txt text eol=lf
+LICENSE text eol=lf
+README* text eol=lf
+
+# Requirements files
+requirements*.txt text eol=lf
+*.pip text eol=lf
+
+# Git files
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.gitkeep text eol=lf
+
+# JSON files
+*.json text eol=lf
+
+# YAML files
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# Shell scripts (Unix)
+*.sh text eol=lf
+
+# Windows scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Test files
+test_*.py text eol=lf diff=python
+*_test.py text eol=lf diff=python
+
+# Persona files (markdown with YAML frontmatter)
+personas/*.md text eol=lf linguist-language=Markdown
+
+# Exclude test fixtures from language statistics
+tests/fixtures/* linguist-vendored
+
+# Archive files
+*.zip binary
+*.tar binary
+*.gz binary
+*.tgz binary
+*.rar binary
+*.7z binary
+
+# Image files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Font files
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Export diff for Python files using Python-specific patterns
+*.py diff=python
+
+# Mark generated files
+*.pyc linguist-generated=true
+__pycache__/ linguist-generated=true
+dist/ linguist-generated=true
+build/ linguist-generated=true
+*.egg-info/ linguist-generated=true
+
+# Coverage reports
+htmlcov/ linguist-generated=true
+.coverage linguist-generated=true
+coverage.xml linguist-generated=true
